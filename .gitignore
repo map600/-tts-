@@ -1,0 +1,23 @@
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# ===== IDE =====
+.idea/
+.vscode/
+
+# ===== 大数据与模型产物（体积过大，不进入 GitHub 仓库）=====
+datasets/
+output/
+final_model/*.pth
+
+# ===== 合成音频输出 =====
+*.wav
+!web_ui/samples/sample_ref.wav
+
+# ===== 日志与临时文件 =====
+*.log
+*.tmp
+.venv/

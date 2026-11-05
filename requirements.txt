@@ -1,0 +1,30 @@
+# XTTS 语音合成项目依赖
+# 安装顺序建议：
+#   1) 先安装与显卡匹配的 torch/torchaudio（见 https://pytorch.org/get-started/locally/）
+#   2) pip install -r requirements.txt
+
+# ---- 深度学习核心（GPU 用户请按官方指引装 CUDA 版本）----
+torch>=2.1
+torchaudio>=2.1
+
+# ---- TTS 框架（仓库内 TTS-dev 为开发时使用的本地源码副本）----
+-e ./TTS-dev
+trainer==0.0.36
+transformers==4.33.0
+tokenizers==0.13.3
+librosa==0.10.0
+soundfile==0.13.1
+scipy==1.11.4
+numpy>=1.22
+coqpit==0.0.17
+
+# ---- Web 服务 ----
+fastapi>=0.110
+uvicorn[standard]>=0.29
+python-multipart>=0.0.9
+
+# ---- 工具 ----
+requests>=2.28
+tqdm>=4.64
+tensorboard>=2.13
+pandas>=1.5
